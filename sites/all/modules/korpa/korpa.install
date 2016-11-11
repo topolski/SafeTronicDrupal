@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Korpa install file
+ */
+
+define('KORPA_DEFAULT_CURRENCY', 'EUR');
+
+/**
+ * Implements hook_install().
+ */
+function korpa_install() {
+  // Setting up the default currency.
+  variable_set('korpa_currency', KORPA_DEFAULT_CURRENCY);
+}
+/**
+ * Implements hook_uninstall().
+ */
+function korpa_uninstall() {
+  // Currency.
+  variable_del('korpa_currency');
+  // Delete the price field.
+  $types = variable_get('korpa_content_types');
+  if (is_array($types)) {
+    drupal_load('module', 'korpa');
+    // Foreach selected content type, delete the price field.
+    foreach ($types as $type => $checked) {
+      if (!empty($checked)) {
+        foreach (korpa_get_fields() as $field_name => $field_) {
+          // Price instance.
+          $instance = array(
+            'field_name' => $field_name,
+            'entity_type' => 'node',
+            'bundle' => $type,
+          );
+          field_delete_instance($instance);
+        }
+      }
+    }
+  }
+  
+  // Delete the content types from the variables table.
+  variable_del('korpa_content_types');
+}
+

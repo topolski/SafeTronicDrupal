@@ -1,0 +1,50 @@
+name = Sefovi Theme
+description = Sefovi Theme is a responsive Drupal 7 theme. Developed by <a href="http://www.devsaran.com" target="_blank">Devsaran.com</a> and edited by Milanko Topolski.
+core = 7.x
+engine = phptemplate
+
+; This theme is compatible with Drupal 7 core. And it is a sub-theme of Professional_theme.
+
+base theme  = professional_theme
+
+stylesheets[all][] = style.css
+scripts[] = js/custom.js
+regions[sidebar_first]  = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[header]         = Header
+regions[front_welcome]  = Front Welcome
+regions[content]        = Content
+regions[content_top]    = Content Top
+regions[help]           = Help
+regions[footer]         = Footer
+regions[footer_first]   = First Bottom
+regions[footer_second]  = Second Bottom
+regions[footer_third]   = Third Bottom
+features[] = logo
+;features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+settings[breadcrumbs]  = 1
+settings[slideshow_display]  = 1
+settings[slideshow_all] = 0
+settings[slide1_head]  = "Servis"
+settings[slide2_head]  = "Referentna lista"
+settings[slide3_head]  = "O sefovima"
+settings[slide1_desc]  = "Na sve proizvode, dajemo garanciju 5 godina (osim SAT 03, gde je garantni rok 2 godine). Telefon servisne službe: 063/437556, 022/315734."
+settings[slide2_desc]  = "Poštujući privatnost naših korisnika, specifičnost upotrebne vrednosti proizvoda, a na osnovu pismenih ugovora i usmenih dogovora, podatke o korisnicima držimo u tajnosti."
+settings[slide3_desc]  = "Sefovi marke SAFETRONICS su izrađeni na osnovu iskustava kriminologa, hotelijera, bankara... Proizvođač sefova marke SAFETRONICS je firma Jozef Murgaš Elektronics iz Banske Bystrice - Republika Slovačka."
+settings[slide1_url]  = "node/1"
+settings[slide2_url]  = "node/2"
+settings[slide3_url]  = "node/3"
+
+; Information added by Drupal.org packaging script on 2014-04-23
+version = "7.x-2.04"
+core = "7.x"
+project = "sefovi_theme"
+datestamp = "1398269327"
+

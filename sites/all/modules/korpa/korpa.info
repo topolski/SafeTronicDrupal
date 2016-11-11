@@ -1,0 +1,8 @@
+name = Tope korpa
+description = Implementacija shoping korpe.
+package = Tope modul
+core = 7.x
+configure = admin/config/korpa/settings
+stylesheets[all][] = korpa.css
+files[] = korpa.module
+
